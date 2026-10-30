@@ -1,0 +1,50 @@
+[
+  {
+    "id": "NLP-001",
+    "title": "Natural Language Processing",
+    "source": "Built-in demo notes",
+    "content": "Natural Language Processing (NLP) is a field of artificial intelligence that enables computers to process, analyze, and generate human language. Common tasks include tokenization, stemming, lemmatization, named entity recognition, text classification, information retrieval, and question answering."
+  },
+  {
+    "id": "NLP-002",
+    "title": "Tokenization, stemming, and lemmatization",
+    "source": "Built-in demo notes",
+    "content": "Tokenization splits text into smaller units such as sentences or words. Stemming removes word endings using heuristic rules and may produce a non-dictionary form. Lemmatization uses vocabulary and morphological analysis to return a base dictionary form. For example, stemming may reduce studies to studi, while lemmatization returns study."
+  },
+  {
+    "id": "NLP-003",
+    "title": "TF-IDF and cosine similarity",
+    "source": "Built-in demo notes",
+    "content": "TF-IDF stands for term frequency-inverse document frequency. Term frequency measures how often a term occurs in a document, while inverse document frequency reduces the weight of terms that occur in many documents. Cosine similarity measures the angle-based similarity between two vectors. TF-IDF vectors and cosine similarity can be used for keyword-based information retrieval."
+  },
+  {
+    "id": "RAG-001",
+    "title": "Retrieval-Augmented Generation",
+    "source": "Built-in demo notes",
+    "content": "Retrieval-Augmented Generation (RAG) retrieves relevant passages from an external knowledge source and supplies them as context to a generative language model. A typical pipeline loads documents, extracts text, splits text into chunks, creates embeddings, indexes chunks, retrieves relevant chunks for a query, and generates an answer grounded in the retrieved context. RAG can reduce unsupported answers but does not guarantee correctness."
+  },
+  {
+    "id": "EMB-001",
+    "title": "Text embeddings and vector search",
+    "source": "Built-in demo notes",
+    "content": "A text embedding is a numerical vector representing semantic information in text. Sentence Transformers can generate embeddings for passages and questions. A vector index such as FAISS can search for nearby vectors efficiently. Semantic search can retrieve passages that have similar meanings even when they do not share exactly the same keywords."
+  },
+  {
+    "id": "GEN-001",
+    "title": "Generative AI and large language models",
+    "source": "Built-in demo notes",
+    "content": "Generative AI models create new content such as text, explanations, summaries, and questions. A large language model generates text based on its learned parameters and the prompt. In a RAG application, the model should use retrieved evidence and clearly acknowledge when the supplied context is insufficient."
+  },
+  {
+    "id": "EXAM-001",
+    "title": "Designing an exam practice test",
+    "source": "Built-in demo notes",
+    "content": "A useful practice test can include multiple-choice questions, short-answer questions, and long-answer questions. The system should record the question, answer options when applicable, expected answer, topic, difficulty, and marks. Student feedback should explain why an answer is correct or incorrect. Generated tests should be reviewed before being treated as authoritative."
+  },
+  {
+    "id": "IR-001",
+    "title": "BM25 and hybrid retrieval",
+    "source": "Built-in demo notes",
+    "content": "BM25 is a keyword-based ranking algorithm that scores documents based on query term matching, term frequency, document length, and inverse document frequency. Hybrid retrieval combines keyword search such as BM25 with semantic vector search. This can improve retrieval when exact technical terms and semantically related wording both matter."
+  }
+]

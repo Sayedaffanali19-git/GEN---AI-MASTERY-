@@ -1,0 +1,10 @@
+
+.venv/
+venv/
+__pycache__/
+.env
+node_modules/
+dist/
+*.pyc
+backend/uploads/
+backend/vector_store/
