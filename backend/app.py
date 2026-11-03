@@ -94,7 +94,9 @@ CORS(app, resources={
     r"/*": {
         "origins": [
             "http://localhost:5173",
-            "http://127.0.0.1:5173"
+            "http://127.0.0.1:5173",
+            "https://gen-ai-mastery.vercel.app",
+            "https://gen-ai-mastery-sayedaffanali19-git.vercel.app"
         ]
     }
 })
