@@ -520,7 +520,27 @@ async function ask(q = question) {
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-mark">
-            <BrainCircuit size={23} />
+            <svg
+  viewBox="0 0 48 48"
+  width="30"
+  height="30"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Orca logo"
+>
+  <path
+    d="M5 27C9 17 19 11 31 13C37 14 41 18 44 22C39 21 35 23 32 27C27 34 17 37 9 33L4 37L5 27Z"
+    fill="#172337"
+  />
+  <path
+    d="M17 29C22 26 27 23 33 24C30 29 24 32 18 32Z"
+    fill="#FFFFFF"
+  />
+  <path
+    d="M27 14L31 6L35 16Z"
+    fill="#172337"
+  />
+  <circle cx="36" cy="19" r="1.5" fill="#FFFFFF" />
+</svg>
           </div>
           <div>
             <strong>ExamPrep AI</strong>
