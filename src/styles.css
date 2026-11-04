@@ -163,3 +163,380 @@ button:not(:disabled):hover {
     box-sizing: border-box;
   }
 }
+:root {
+  --orca-navy: #172337;
+  --orca-navy-light: #24344b;
+  --orca-ivory: #f5f5f2;
+  --orca-white: #ffffff;
+  --orca-grey: #e7e9ed;
+  --orca-slate: #64748b;
+  --orca-border: #dce1e7;
+  --orca-text: #202b3b;
+}
+
+body {
+  background: var(--orca-ivory);
+  color: var(--orca-text);
+}
+
+.app-shell {
+  background: var(--orca-ivory);
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--orca-navy);
+  color: var(--orca-white);
+  border-right: none;
+}
+
+.brand {
+  color: var(--orca-white);
+}
+
+.brand-mark {
+  background: var(--orca-white);
+  color: var(--orca-navy);
+  border-radius: 12px;
+}
+
+.side-label,
+.sidebar .eyebrow {
+  color: #aab6c7;
+}
+
+.nav {
+  color: #cbd5e1;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav:hover {
+  background: var(--orca-navy-light);
+  color: var(--orca-white);
+}
+
+.nav.active {
+  background: #34465e;
+  color: var(--orca-white);
+}
+
+.sidebar-bottom {
+  border-top: 1px solid #344258;
+}
+
+/* Main workspace */
+.main {
+  background: var(--orca-ivory);
+  color: var(--orca-text);
+}
+
+.topbar {
+  background: var(--orca-white);
+  border-bottom: 1px solid var(--orca-border);
+}
+
+.hero {
+  color: var(--orca-text);
+}
+
+.hero h1,
+.hero h2,
+.welcome h1,
+.welcome h2 {
+  color: var(--orca-navy);
+}
+
+.hero-icon {
+  background: #e9edf2;
+  color: var(--orca-navy);
+}
+
+/* Cards and panels */
+.upload-panel,
+.practice-panel,
+.practice-results,
+.knowledge-note {
+  background: var(--orca-white);
+  border: 1px solid var(--orca-border);
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(23, 35, 55, 0.04);
+}
+
+.document-item,
+.practice-question,
+.document-select {
+  background: var(--orca-white);
+  border-color: var(--orca-border);
+  color: var(--orca-text);
+}
+
+.document-item:hover {
+  background: #f1f3f6;
+}
+
+/* Chat */
+.chat-area {
+  background: transparent;
+}
+
+.message .bubble {
+  border-radius: 14px;
+}
+
+.message.user .bubble {
+  background: var(--orca-navy);
+  color: var(--orca-white);
+}
+
+.message.assistant .bubble {
+  background: var(--orca-white);
+  color: var(--orca-text);
+  border: 1px solid var(--orca-border);
+}
+
+.avatar {
+  background: #e9edf2;
+  color: var(--orca-navy);
+}
+
+.composer {
+  background: var(--orca-white);
+  border: 1px solid var(--orca-border);
+  border-radius: 16px;
+}
+
+.composer input,
+.composer textarea {
+  color: var(--orca-text);
+}
+
+/* Buttons */
+button,
+.upload-button {
+  transition: all 0.2s ease;
+}
+
+button.primary,
+button[type="submit"],
+.upload-button {
+  background: var(--orca-navy);
+  color: var(--orca-white);
+  border-color: var(--orca-navy);
+}
+
+button.primary:hover,
+button[type="submit"]:hover,
+.upload-button:hover {
+  background: var(--orca-navy-light);
+}
+
+/* Suggestions and secondary controls */
+.suggestions button,
+.document-refresh,
+.document-delete {
+  border-color: var(--orca-border);
+  color: var(--orca-navy);
+}
+
+.suggestions button:hover {
+  background: #e9edf2;
+}
+
+/* General text */
+.eyebrow,
+.role-label,
+.upload-hint,
+.document-info {
+  color: var(--orca-slate);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  border-color: var(--orca-border);
+  color: var(--orca-text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #64748b;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.12);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .app-shell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+
+  .main {
+    width: 100%;
+    min-width: 0;
+  }
+}
+/* ORCA study materials refinement */
+
+.upload-panel {
+  padding: 28px;
+  margin-bottom: 28px;
+  background: #fff;
+  border: 1px solid #dce1e7;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(23, 35, 55, 0.04);
+}
+
+.upload-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.upload-heading h2,
+.document-heading h3 {
+  color: #172337;
+}
+
+.upload-heading p {
+  color: #64748b;
+}
+
+.document-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 24px 0 14px;
+}
+
+.document-refresh,
+.document-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 1px solid #dce1e7;
+  border-radius: 9px;
+  background: #f5f5f2;
+  color: #172337;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.document-refresh:hover,
+.document-delete:hover {
+  background: #e7e9ed;
+}
+
+.document-select {
+  max-width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid #dce1e7;
+  border-radius: 9px;
+  background: #fff;
+  color: #172337;
+}
+
+.document-select-label {
+  display: block;
+  margin: 18px 0 7px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.document-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 15px;
+  border: 1px solid #e7e9ed;
+  border-radius: 11px;
+  background: #fafbfc;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: #64748b;
+}
+
+.document-info > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.document-name {
+  overflow-wrap: anywhere;
+  color: #172337;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.document-info small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.document-delete {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #64748b;
+}
+
+.document-delete:hover {
+  color: #b42318;
+  background: #fff1f0;
+}
+
+.upload-message {
+  color: #334155;
+  font-size: 14px;
+}
+
+.welcome .sparkle {
+  background: #e9edf2;
+  color: #172337;
+}
+
+.suggestions button {
+  border: 1px solid #dce1e7;
+  border-radius: 12px;
+  background: #fff;
+  color: #172337;
+}
+
+.suggestions button:hover {
+  background: #f0f2f5;
+  border-color: #cbd5e1;
+}
+
+.knowledge-note {
+  border: 1px solid #dce1e7;
+  background: #fff;
+  color: #64748b;
+}
